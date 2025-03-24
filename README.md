@@ -44,7 +44,7 @@ T_AOV_LIGHTS, T_AOV_SHADERS, T_TECH, just add the channels in the variable.
 
     a) channel filter - needs channels comman name like direct, indirect etc.
 
-eg : direct, indirect, specular ----> separate names with commas.
+    eg : direct, indirect, specular ----> separate names with commas.
 
     b) affect channels - if its ticked yes than it will enable the ticks from the list and if its ticked no than will disable those.
 
