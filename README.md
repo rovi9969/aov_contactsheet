@@ -51,8 +51,10 @@ T_AOV_LIGHTS, T_AOV_SHADERS, T_TECH, just add the channels in the variable.
 
     c) Toggle Channels - execution takes place this operation can be done with this button.
 
-Installation:
+# Installation:
 1. Its a Gizmo can be copied over to .nuke folder i.e. - C:\Users\<username>\.nuke
    Alternatively advance ways can be used.
 
+# *Note* : 
+If gets text font error then just open the gizmo with text editor of your choice and search "C:/Windows/Fonts/arial.ttf" and replace it with the font in your machine, this can likely come if using other OS or font missing.
 
