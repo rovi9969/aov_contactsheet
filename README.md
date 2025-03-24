@@ -5,6 +5,7 @@ A simple Nuke Gizmo for creating Contactsheet for AOVs/Channels. You can easily 
 1) Create Contactsheet - Spreads out the AOVs/channels checked ON in the list.
 2) AOVs/channels Names Options for render withing Contactsheet.
 
+![image description](resources/thumbnail.jpg)
 
 # detailed options :
 
