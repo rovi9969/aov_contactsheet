@@ -58,3 +58,11 @@ T_AOV_LIGHTS, T_AOV_SHADERS, T_TECH, just add the channels in the variable.
 # *Note* : 
 If gets text font error then just open the gizmo with text editor of your choice and search "C:/Windows/Fonts/arial.ttf" and replace it with the font in your machine, this can likely come if using other OS or font missing.
 
+################################### 25/05/2026 ######################################## 
+### Agenda till 05/06/2026
+### The script is in progress for updating with the bug fixes: 
+### 1. duplicating the nodes errors for the links.
+### 2. Adding text translate controls 
+### 3. Removing the issue of text font selection if linux or windows.
+### 4. Code cleanup for scalability.
+
