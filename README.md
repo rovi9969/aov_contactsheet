@@ -21,11 +21,15 @@ A simple Nuke Gizmo for creating Contactsheet for AOVs/Channels. You can easily 
 
     a) Show Labels - Enable/Disable for AOVs/channels names.
 
-    b) Font Multiplier - Font size multiplier to increase or reduce the size of a font.
+    b) Global Font Scale - Font size multiplier to increase or reduce the size of a font.
+	
+	c) Translate: Allows for translation of the text within the contact sheet.
 
-    c) Font Color - Customize Color value for text.
+    d) Font Color - Customize Color value for text.
 
-    d) Translate X and Translate Y - move text in X or Y direction for flexibility and clarity.
+    e) Label Background Color: Provides a control to change the background color.
+	
+	f) Label Background Opacity: Adjusts the transparency for the text label background element in the contact sheet.
 
 6) BORDER -
 
@@ -35,7 +39,7 @@ A simple Nuke Gizmo for creating Contactsheet for AOVs/Channels. You can easily 
 
     c) Border Size - Thickness for the outerline.
 
-7) Preset - ALL, AOV_LIGHTS, AOV_SHADERS, TECH
+7) Preset - ALL, AOV_LIGHTS, AOV_SHADERS, TECH, - None
 
 Preset made as per the arnold renderer, can be edited by editing the gizmo in text editor and finding
 
@@ -52,17 +56,30 @@ T_AOV_LIGHTS, T_AOV_SHADERS, T_TECH, just add the channels in the variable.
     c) Toggle Channels - execution takes place this operation can be done with this button.
 
 # Installation:
-1. Its a Gizmo can be copied over to .nuke folder i.e. - C:\Users\<username>\.nuke
-   Alternatively advance ways can be used.
+1. Copy the folder `gizmos` and `python` in your `.nuke` folder located at `C:\Users\<username>\.nuke`.
+2. Copy the content of `init.py` in your `init.py` located at `C:\Users\<username>\.nuke` if the file already exists else copy the file directly.
+3. Copy the content of `menu.py` in your `menu.py` located at `C:\Users\<username>\.nuke`
+if the file already exists else copy the file directly.
 
-# *Note* : 
-If gets text font error then just open the gizmo with text editor of your choice and search "C:/Windows/Fonts/arial.ttf" and replace it with the font in your machine, this can likely come if using other OS or font missing.
+## Usage
 
+To use `aov_contactsheet`, follow these steps:
+1. Tab in nodes graph and select `AOVContactsheet` or select it through Nodes -> Other.
+2. Connect the multi-exr read node for which you want to generate a contact sheet.
+3. Press `Gather AOVs`, it will gather the AOVs info, check whichever AOVs you need with help of filter and Preset. 
+3. Run / Execute the `Create Contactheet` Button.
+4. Adjust the various controls to customize the appearance of the contact sheet as desired.
+
+# ChangeLog
 ################################### 25/05/2026 ######################################## 
-### Agenda till 05/06/2026
-### The script is in progress for updating with the bug fixes: 
+### The script was in progress for updating with the bug fixes: 
 ### 1. duplicating the nodes errors for the links.
-### 2. Adding text translate controls 
-### 3. Removing the issue of text font selection if linux or windows.
+### 2. Adding text translate controls with background enable and background opacity.
+### 3. Removed the dependency of text font selection if linux or windows.
 ### 4. Code cleanup for scalability.
 
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for new features, please submit an issue or pull request on our GitHub repository.
+
+## License
+aov_contactsheet is released under the MIT License. For more details, see the LICENSE [blocked] file.

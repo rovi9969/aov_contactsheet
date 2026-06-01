@@ -1,0 +1,62 @@
+#! C:/Program Files/Nuke16.0v7/nuke-16.0.7.dll -nx
+version 16.0 v7
+Gizmo {
+ onCreate "import aov_contactsheet.logic as logic;logic.restore_contactsheet_flags_script(nuke.thisNode())"
+ knobChanged "import aov_contactsheet.logic as logic; logic.knob_changed_script(nuke.thisNode())"
+ addUserKnob {20 User}
+ addUserKnob {26 credits l "" +STARTLINE T "<br><font size=4 color=grey><b>rm_AOV_Contactsheet v1.1</b></font><br><font size=2 color=grey>created by <u>Ravi Motwani</u>.<br>published : June, 2026.</font>"}
+ addUserKnob {26 separator0 l "" +STARTLINE}
+ addUserKnob {7 res_mult l "Resolution Multiplier" t "Set the resolution multiplier for the contactsheet" -STARTLINE R 0 5}
+ res_mult 0.25
+ addUserKnob {26 separator1 l "" +STARTLINE}
+ addUserKnob {22 gather_aovs_btn l "Gather AOVs" t "Gather's AOVs for the contactsheet" -STARTLINE T "import aov_contactsheet.logic as logic;\nlogic.gather_aovs(nuke.thisNode())\n    "}
+ addUserKnob {22 create_contactsheet_btn l "Create Contactsheet" t "Create the contactsheet" -STARTLINE T "import aov_contactsheet.logic as logic;\nlogic.create_aov_contactsheet(nuke.thisNode())    \n    "}
+ addUserKnob {22 clear_btn l Clear t "Clear the contactsheet" -STARTLINE T "import aov_contactsheet.logic as logic; \nlogic.clear_aovs(nuke.thisNode())\n    "}
+ addUserKnob {26 separator2 l "" +STARTLINE}
+ addUserKnob {20 text_groupin l "T E X T   L A B E L S" -STARTLINE n 2}
+ addUserKnob {6 show_labels l "Show Labels" t "Toggle to show or hide labels" +STARTLINE}
+ show_labels true
+ addUserKnob {1 expression_label l "Label Expression" t "Expression to generate label text" +HIDDEN}
+ expression_label "\[regsub \{\[\\._]?\\d+\$\} \[file rootname \[file tail \[value \[topnode parent ].file]]] \"\"]"
+ addUserKnob {7 global_font_scale l "Global Font Scale" t "Set the global text font scale"}
+ global_font_scale 1
+ addUserKnob {12 translate l Translate t "Set the translation of the text labels"}
+ addUserKnob {22 translate_btn l Apply t "Apply the translation to the text labels" -STARTLINE T "import aov_contactsheet.logic as logic; \nlogic.translate_text_node(nuke.thisNode())"}
+ addUserKnob {19 font_color l "Font Color" t "Change the text color"}
+ font_color {1 1 1 1}
+ addUserKnob {6 enable_label_bg l "Enable Label Background" t "Toggle to enable or disable label background" +STARTLINE}
+ enable_label_bg true
+ addUserKnob {19 label_bg_color l "Label Background Color" t "Set the label background color"}
+ label_bg_color {1 1 1 1}
+ addUserKnob {7 label_bg_opacity l "Label Background Opacity" t "Set the label background opacity"}
+ label_bg_opacity 0.1
+ addUserKnob {20 text_groupout -STARTLINE n -1}
+ addUserKnob {26 separator3 l "" +STARTLINE T "                    "}
+ addUserKnob {20 border_begin l "B O R D E R   O U T L I N E" -STARTLINE n 2}
+ addUserKnob {6 border_draw l "Draw Border" t "Toggle to draw or not draw the border" +STARTLINE}
+ border_draw true
+ addUserKnob {19 border_color l "Border Color" t "Set the border color"}
+ border_color {0 0.5 0 1}
+ addUserKnob {7 border_size l "Border Size" t "Set the border size" R 0 20}
+ border_size 10
+ addUserKnob {20 border_out -STARTLINE n -1}
+ addUserKnob {26 separator4 l "" +STARTLINE}
+ addUserKnob {4 aov_filter l Preset t "Presets for AOVs selection in below list" M {All AOV_Lights AOV_Shaders Tech -}}
+ addUserKnob {1 channel_filter l "channel filter :" t "add common text of aovs and separate using comma,/neg : direct,indirect,sss"}
+ addUserKnob {6 affect_channels l "affect channels" t "Enabling this will enable items of below list, disabling will turn it off." -STARTLINE}
+ affect_channels true
+ addUserKnob {22 toggle_channel_btn l "Toggle Channels" -STARTLINE T "import aov_contactsheet.logic as logic; \nlogic.toggle_channel_script(nuke.thisNode())"}
+ addUserKnob {26 separator5 l "" +STARTLINE}
+ addUserKnob {52 toggle_knobChanged l "" -STARTLINE T "nuke.thisNode().knob(\"knobChanged\").setValue('import aov_contactsheet.logic as logic; logic.knob_changed_script(nuke.thisNode())')"}
+ addUserKnob {52 onCreate_1 l "" -STARTLINE T "nuke.thisNode().knob('onCreate').setValue('import aov_contactsheet.logic as logic;logic.restore_contactsheet_flags_script(nuke.thisNode())')"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 33
+ }
+ Output {
+  name Output1
+  selected true
+ }
+end_group
