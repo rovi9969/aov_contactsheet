@@ -1,13 +1,13 @@
 # rm_aov_contactsheet
 A simple Nuke Gizmo for creating Contactsheet for AOVs/Channels. You can easily create the contactsheet for any multi-exr as AOVs are nothing but just channels.
 
-# main features :
+# main features:
 1) Create Contactsheet - Spreads out the AOVs/channels checked ON in the list.
 2) AOVs/channels Names Options for render withing Contactsheet.
 
 ![image description](resources/thumbnail.jpg)
 
-# detailed options :
+# detailed options:
 
 1) Resolution Multiplier - Resolution scale for the contactsheet, which in case becomes too big in size so that can controlled with multiplier.
 
@@ -61,7 +61,7 @@ T_AOV_LIGHTS, T_AOV_SHADERS, T_TECH, just add the channels in the variable.
 3. Copy the content of `menu.py` in your `menu.py` located at `C:\Users\<username>\.nuke`
 if the file already exists else copy the file directly.
 
-## Usage
+## Usage:
 
 To use `aov_contactsheet`, follow these steps:
 1. Tab in nodes graph and select `AOVContactsheet` or select it through Nodes -> Other.
@@ -70,7 +70,7 @@ To use `aov_contactsheet`, follow these steps:
 3. Run / Execute the `Create Contactheet` Button.
 4. Adjust the various controls to customize the appearance of the contact sheet as desired.
 
-# ChangeLog
+# Changelog:
 ################################### 25/05/2026 ######################################## 
 ### The script was in progress for updating with the bug fixes: 
 ### 1. duplicating the nodes errors for the links.
@@ -78,8 +78,8 @@ To use `aov_contactsheet`, follow these steps:
 ### 3. Removed the dependency of text font selection if linux or windows.
 ### 4. Code cleanup for scalability.
 
-## Contributing
+## Contributing:
 Contributions are welcome! If you find any bugs or have suggestions for new features, please submit an issue or pull request on our GitHub repository.
 
-## License
+## License:
 aov_contactsheet is released under the MIT License. For more details, see the LICENSE [blocked] file.
